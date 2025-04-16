@@ -18,6 +18,9 @@ public class MainBank {
         arrTransaksi[4] = new Transaksi("Tr001", 200000, 100000, 100000, "23-04-2024", "Debit", arrBank[4]);
       
         ServiceTransaksi service = new ServiceTransaksi(5);
+        for (int i = 0; i < arrTransaksi.length; i++) {
+            service.tambah(arrTransaksi[i]);
+        }
 
         do {
             System.out.println("==========POLINEMA BANK==========");
