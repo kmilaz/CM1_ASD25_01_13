@@ -20,7 +20,7 @@ public class Transaksi {
 
 
     void tampilDataTransaksi(){
-        System.out.printf("%-15s %-15s %-10.2f %-15.2f %-15.2f %-20s %-10s\n",
+        System.out.printf("%-15s %-15s %-10s %-15s %-15s %-20s %-10s\n",
         kodeTransaksi,
         bankAcc.noRekening,
         saldo,
