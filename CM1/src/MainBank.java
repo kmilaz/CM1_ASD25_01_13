@@ -43,7 +43,7 @@ public class MainBank {
                     }
                     break;
                 case 2:
-                    System.out.printf("\"%-15s %-15s %-10.2f %-15.2f %-15.2f %-20s %-10s\n", "Kode Transaksi", "No Rekening", "Saldo", "Debit/Kredit", "Final Saldo", "Tanggal Transaksi", "Type");
+                    System.out.printf("%-15s %-15s %-10s %-15s %-15s %-20s %-10s\n", "Kode Transaksi", "No Rekening", "Saldo", "Debit/Kredit", "Final Saldo", "Tanggal Transaksi", "Type");
                     service.tampil();
                     break;
                 case 3:
