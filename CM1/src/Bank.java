@@ -15,8 +15,13 @@ public class Bank {
     }
 
     void tampilDataNorek(){
-        System.out.println("No Rekening\tNama\tNama Ibu\tNoHp\tEmail");
-        System.out.println(noRekening + "\t" + nama + "\t" + namaIbu  + "\t" + noHP + "\t" + email + "\t");
+        System.out.printf("%-15s %-15s %-15s %-20s %-30s\n",
+        noRekening,
+        nama,
+        namaIbu,
+        noHP,
+        email
+        );
     }
 
 }
