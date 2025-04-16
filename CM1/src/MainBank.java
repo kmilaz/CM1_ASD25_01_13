@@ -4,11 +4,11 @@ public class MainBank {
         Scanner sc = new Scanner(System.in);
 
         Bank [] arrBank = new Bank[5];
-        arrBank[0] = new Bank("16030927", "Wallace", "Mei Mei","082-458-264-3263","wallace@gmail.com");
-        arrBank[1] = new Bank("16100617", "Darius", "Susanti","081-357-843-0547","darius@pt.otg");
-        arrBank[2] = new Bank("16240401", "Fuller", "Rosalia","085-556-712-7062","fuller@gmail.com");
-        arrBank[3] = new Bank("16270525", "Maria", "Krabela","082-267-223-0234","maria@gmail.com");
-        arrBank[4] = new Bank("16101617", "Gery", "Fatimah","083-683-416-8323","gery@gery.com");
+        arrBank[0] = new Bank("16030927 2416", "Wallace", "Mei Mei","082-458-264-3263","wallace@gmail.com");
+        arrBank[1] = new Bank("16100617 0112", "Darius", "Susanti","081-357-843-0547","darius@pt.otg");
+        arrBank[2] = new Bank("16240401 2243", "Fuller", "Rosalia","085-556-712-7062","fuller@gmail.com");
+        arrBank[3] = new Bank("16270525 0573", "Maria", "Krabela","082-267-223-0234","maria@gmail.com");
+        arrBank[4] = new Bank("16101617 3084", "Gery", "Fatimah","083-683-416-8323","gery@gery.com");
 
         Transaksi[] arrTransaksi =  new Transaksi[5];
         arrTransaksi[0] = new Transaksi("Tr005", 600000, 200000, 800000, "23-04-2024", "Kredit", arrBank[0]);
@@ -22,6 +22,8 @@ public class MainBank {
             service.tambah(arrTransaksi[i]);
         }
 
+        int menu=0;
+
         do {
             System.out.println("==========POLINEMA BANK==========");
             System.out.println("BANK MENU:");
@@ -32,7 +34,7 @@ public class MainBank {
             System.out.println("5. Sort Data");
             System.out.println("6. Exit");
             System.out.print("Choose Menu(1-6): ");
-            int menu = sc.nextInt();
+            menu = sc.nextInt();
             sc.nextLine();
 
             switch (menu) {
@@ -74,8 +76,9 @@ public class MainBank {
                     break;
                 case 6:
                     System.out.println("Terima kasih.");
-                    return;
+                    break;
                 default:
+                    System.out.println("Pilihan menu tidak valid!");
                     break;
             }
         } while (menu!=6);        
