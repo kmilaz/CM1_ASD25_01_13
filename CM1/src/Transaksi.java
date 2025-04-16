@@ -20,8 +20,15 @@ public class Transaksi {
 
 
     void tampilDataTransaksi(){
-        System.out.println("Kode Transaksi\tNo Rekening\tSaldo\tDebit/Kredit\tFinal Saldo\tTanggal Transaksi\tType");
-        System.out.println(kodeTransaksi + "\t" + bankAcc.noRekening + "\t" + saldo + "\t" + inOutSaldo + "\t" + finalSaldo + "\t" + tanggalTransaksi + "\t" + type + "\t");
+        System.out.printf("%-15s %-15s %-10.2f %-15.2f %-15.2f %-20s %-10s\n",
+        kodeTransaksi,
+        bankAcc.noRekening,
+        saldo,
+        inOutSaldo,
+        finalSaldo,
+        tanggalTransaksi,
+        type
+    );
     }
 
 }
