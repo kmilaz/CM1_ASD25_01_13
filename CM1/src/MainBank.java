@@ -48,7 +48,6 @@ public class MainBank {
                 default:
                     break;
             }
-        } while (true);
-      
+        } while (true);        
     }
 }
