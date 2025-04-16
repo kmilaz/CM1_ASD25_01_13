@@ -30,7 +30,7 @@ public class MainBank {
             System.out.println("3. Search Data");
             System.out.println("4. Display min/max Saldo");
             System.out.println("5. Sort Data");
-            System.out.println("6. exit");
+            System.out.println("6. Exit");
             System.out.print("Choose Menu(1-6): ");
             int menu = sc.nextInt();
             sc.nextLine();
@@ -52,20 +52,32 @@ public class MainBank {
                     String kode = sc.nextLine();
                     Transaksi hasil = service.cariByKodeTransaksi(kode);
                     if (hasil != null) {
-                        hasil.tampilDataTransaksi();
+                        hasil.tampilData();
                     } else {
                         System.out.println("Transaksi tidak ditemukan.");
                     }
                     break;
                 case 4:
+                    Transaksi minSaldo = service.cariMinFinalSaldo();
+                    if (minSaldo != null) {
+                        System.out.println("=== Transaksi dengan Final Saldo Minimum ===");
+                        minSaldo.tampilData();
+                    } else {
+                        System.out.println("Data transaksi kosong.");
+                    }
                     break;
                 case 5:
+                    service.sortingFinalSaldoAsc();
+                    System.out.println("=== Data Transaksi Setelah Diurutkan Final Saldo ASC ===");
+                    System.out.printf("%-15s %-15s %-10s %-15s %-15s %-20s %-10s\n", "Kode Transaksi", "No Rekening", "Saldo", "Debit/Kredit", "Final Saldo", "Tanggal Transaksi", "Type");
+                    service.tampil();
                     break;
                 case 6:
+                    System.out.println("Terima kasih.");
                     return;
                 default:
                     break;
             }
-        } while (true);        
+        } while (menu!=6);        
     }
 }
