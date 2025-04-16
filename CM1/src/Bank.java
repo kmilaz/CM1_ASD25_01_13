@@ -1,4 +1,5 @@
 public class Bank {
+
     String noReknening;
     String nama;
     String namaIbu;
@@ -17,4 +18,5 @@ public class Bank {
         System.out.println("No Rekening\tNama\tNama Ibu\tNoHp\tEmail");
         System.out.println(noReknening + "\t" + nama + "\t" + namaIbu  + "\t" + noHP + "\t" + email + "\t");
     }
+
 }
