@@ -1,4 +1,5 @@
 public class Transaksi {
+
     String kodeTransaksi;
     double saldo;
     double inOutSaldo;
@@ -22,4 +23,5 @@ public class Transaksi {
         System.out.println("Kode Transaksi\tNo Rekening\tSaldo\tDebit/Kredit\tFinal Saldo\tTanggal Transaksi\tType");
         System.out.println(kodeTransaksi + "\t" + bankAcc.noRekening() + "\t" + saldo + "\t" + inOutSaldo + "\t" + finalSaldo + "\t" + tanggalTransaksi + "\t" + type + "\t");
     }
+
 }
