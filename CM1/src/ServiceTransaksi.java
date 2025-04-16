@@ -33,7 +33,6 @@ public class ServiceTransaksi {
 
     Transaksi cariMinFinalSaldo() {
         if (idx == 0) return null;
-
         Transaksi min = listTransaksi[0];
         for (int i = 1; i < idx; i++) {
             if (listTransaksi[i].finalSaldo < min.finalSaldo) {

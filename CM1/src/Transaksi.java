@@ -31,4 +31,15 @@ public class Transaksi {
     );
     }
 
+    void tampilData(){
+        System.out.println("Kode Transaksi    : " + kodeTransaksi);
+        System.out.println("No Rekening       : " + bankAcc.noRekening);
+        System.out.println("Nama              : " + bankAcc.nama);
+        System.out.println("Saldo             : " + saldo);
+        System.out.println("Debit/Kredit      : " + inOutSaldo);
+        System.out.println("Saldo Akhir       : " + finalSaldo);
+        System.out.println("Tanggal Transaksi : " + tanggalTransaksi);
+        System.out.println("Type              : " + type);
+    }
+
 }
